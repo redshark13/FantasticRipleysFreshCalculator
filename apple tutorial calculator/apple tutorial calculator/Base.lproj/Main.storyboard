@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorController" customModule="apple_tutorial_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CustomBgView" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kod-uf-TY1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nV5-Ft-b8o" customClass="CustomBgView" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="264.66666666666669"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-j0-T8F" customClass="CustomLabel" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                <rect key="frame" x="367" y="216.66666666666666" width="0.0" height="39.999999999999972"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LaA-AW-omm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vvf-j0-T8F" secondAttribute="bottom" constant="8" id="Eaf-Uc-vga"/>
+                                            <constraint firstAttribute="trailing" secondItem="vvf-j0-T8F" secondAttribute="trailing" constant="8" id="r0B-sD-NmU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umB-Ut-xDS" customClass="CustomInBetweenView" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="264.66666666666669" width="375" height="513.33333333333326"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-re-GgX">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="513.33333333333337"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NYb-Cv-MvF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="101.66666666666667"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQX-JE-Gaj" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" red="1" green="0.98388139299999999" blue="0.025371135810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="AC">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="AcBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ln-Ga-Jx8"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTM-ii-PKD" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="94" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" red="1" green="0.98388139299999999" blue="0.025371135810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3t-gH-OcA" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="188" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" red="1" green="0.98388139299999999" blue="0.025371135810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Back">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="BackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jD1-k9-fNK"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-ie-VoB" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="282" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="/">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="DivisionBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFB-nW-zML"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JGo-2M-Djg">
+                                                        <rect key="frame" x="0.0" y="102.66666666666663" width="375" height="102"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOU-QL-eqR" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="SevenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnu-mj-l3A"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfD-Sk-X3k" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="94" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="EightBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3n-2j-j3l"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzb-MB-sgB" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="188" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="NineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Xy-A3-jVT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34Z-63-cfo" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="282" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="MultiplyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nBQ-VL-o81"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dn6-d4-DII">
+                                                        <rect key="frame" x="0.0" y="205.66666666666663" width="375" height="102"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-5A-egp" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="FourBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bV9-gi-GG7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtQ-dj-CnC" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="94" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="FiveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5HV-hb-RIA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grk-6T-5cv" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="188" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="SixBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7S-NM-7CB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVL-WS-Tfd" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="282" y="0.0" width="93" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="SubtractBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAa-LD-ASx"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iVb-W2-iGH">
+                                                        <rect key="frame" x="0.0" y="308.66666666666669" width="375" height="101.66666666666669"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-dt-O5z" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="OneBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6y-Z6-HkU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acm-3S-Y5q" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="94" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="TwoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqw-CT-Jyl"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqx-Qr-hxx" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="188" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ThreeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EZZ-tb-I2m"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOz-qR-zGO" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="282" y="0.0" width="93" height="101.66666666666667"/>
+                                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="PlusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5R7-fv-yXW"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZcL-A7-DEV">
+                                                        <rect key="frame" x="0.0" y="411.33333333333331" width="375" height="101.99999999999994"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-rf-5nw" customClass="ZeroBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="0">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ZeroBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n0I-hl-hwk"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpL-eg-ZLt" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="187.66666666666666" y="0.0" width="92.999999999999972" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=".">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="DecimalBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYS-5A-UCI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ij-QH-ZnP" customClass="RoundedBorderBtn" customModule="apple_tutorial_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="281.66666666666669" y="0.0" width="93.333333333333314" height="102"/>
+                                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="=">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="EqualsBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BR3-hg-hca"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="ZVj-rf-5nw" firstAttribute="width" secondItem="IpL-eg-ZLt" secondAttribute="width" multiplier="2" id="1xl-h1-QWE"/>
+                                                            <constraint firstItem="IpL-eg-ZLt" firstAttribute="width" secondItem="8ij-QH-ZnP" secondAttribute="width" id="z0p-ds-LeI"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="nhe-re-GgX" secondAttribute="bottom" id="A69-j7-GrQ"/>
+                                            <constraint firstItem="nhe-re-GgX" firstAttribute="leading" secondItem="umB-Ut-xDS" secondAttribute="leading" id="UVh-PB-RDF"/>
+                                            <constraint firstItem="nhe-re-GgX" firstAttribute="top" secondItem="umB-Ut-xDS" secondAttribute="top" id="cyj-d2-Gsb"/>
+                                            <constraint firstAttribute="trailing" secondItem="nhe-re-GgX" secondAttribute="trailing" id="lgd-6f-fbX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="umB-Ut-xDS" firstAttribute="height" secondItem="Kod-uf-TY1" secondAttribute="height" multiplier="0.66" id="o9c-e1-Rjt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kod-uf-TY1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EuJ-a3-eU1"/>
+                            <constraint firstItem="Kod-uf-TY1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GdP-27-Ck4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kod-uf-TY1" secondAttribute="trailing" id="MLe-C6-0ZZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kod-uf-TY1" secondAttribute="bottom" id="lNz-c7-v1z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AcOutlet" destination="nhe-re-GgX" id="dgG-PS-oYo"/>
+                        <outlet property="BackOutlet" destination="v3t-gH-OcA" id="Vgt-OR-uA3"/>
+                        <outlet property="DecimalOutlet" destination="nhe-re-GgX" id="PSk-kB-QG0"/>
+                        <outlet property="DivisionOutlet" destination="NYb-Cv-MvF" id="s2o-FR-ldR"/>
+                        <outlet property="EightOutlet" destination="nhe-re-GgX" id="tuD-Ec-lX1"/>
+                        <outlet property="EqualsOutlet" destination="8ij-QH-ZnP" id="6mi-Tl-OA1"/>
+                        <outlet property="FiveOutlet" destination="nhe-re-GgX" id="q8P-ML-KiU"/>
+                        <outlet property="FourOutlet" destination="nhe-re-GgX" id="qGk-4m-Dds"/>
+                        <outlet property="LabelOutlet" destination="vvf-j0-T8F" id="Nbu-ut-3JD"/>
+                        <outlet property="MultiplyOutlet" destination="34Z-63-cfo" id="zLg-wI-cIA"/>
+                        <outlet property="NineOutlet" destination="nhe-re-GgX" id="lvs-8f-NeI"/>
+                        <outlet property="OneOutlet" destination="nhe-re-GgX" id="61T-dz-UZW"/>
+                        <outlet property="PlusOutlet" destination="WOz-qR-zGO" id="Qno-my-r1W"/>
+                        <outlet property="SevenOutlet" destination="nhe-re-GgX" id="cYt-LV-zpO"/>
+                        <outlet property="SixOutlet" destination="nhe-re-GgX" id="gF4-dk-mxl"/>
+                        <outlet property="SubtractOutlet" destination="PVL-WS-Tfd" id="Enc-6s-reH"/>
+                        <outlet property="ThreeOutlet" destination="nhe-re-GgX" id="ifr-uH-dLd"/>
+                        <outlet property="TwoOutlet" destination="nhe-re-GgX" id="BS1-JP-WDY"/>
+                        <outlet property="ZeroOutlet" destination="nhe-re-GgX" id="TCh-Ns-6Wf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
